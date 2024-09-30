@@ -31,6 +31,7 @@ The project is designed to run locally with Docker, using the following services
            This project uses Docker Compose to manage services. Ensure you have the docker-compose.yml file in your project root
            
 **3.	Microservices Architecture**
+![Architeccture](https://github.com/user-attachments/assets/940df9e2-2935-4c90-b930-25b7f8e2d9a6)
 
 https://github.com/jayvishvakarma/Building-a-Real-Time-Stock-Market-Data-Pipeline/blob/main/Architeccture.png
 
