@@ -17,15 +17,22 @@ Table of Contents
 
 ## **1.	Prerequisites**
 Before you begin, ensure you have met the following requirements:
+
 •	Docker Desktop installed on your local machine.
+
 •	Python 3.8+ installed for any additional scripting or testing.
+
 •	An account with Alpaca for accessing the trading API.
 
 ## **2.	Infrastructure Setup**
 The project is designed to run locally with Docker, using the following services:
+
 •	Redpanda for Kafka message brokering.
+
 •	Apache Flink for real-time data processing.
+
 •	Alpaca API for trading execution.
+
 •	Slack API for notifications.
            Docker Compose
            This project uses Docker Compose to manage services. Ensure you have the docker-compose.yml file in your project root
@@ -59,21 +66,21 @@ The project is designed to run locally with Docker, using the following services
 
 ## **5.	Configuration**
 •	Update the .env file with your Alpaca API key and secret, Slack webhook URL, and any other necessary configurations.
+
 •	Ensure your Docker resources (CPU, Memory) are configured appropriately in Docker Desktop.
 
 ## **6.	Dependencies**
-           Make sure to install the following Python dependencies for any additional scripting:
-           pip install requests flask alpaca-trade-api slack_sdk
-          requests
-         flask
-        alpaca-trade-api
-       slack_sdk
+Make sure to install the following Python dependencies for any additional scripting:
+pip install requests flask alpaca-trade-api slack_sdk
+alpaca-trade-api
+slack_sdk
        
 ## **7.	Getting Started**
 To get started with the project, follow these steps:
 1.	Clone the Repository:
 https://github.com/jayvishvakarma/Building-a-Real-Time-Stock-Market-Data-Pipeline
-2.	Build and Run Docker Containers: Use Docker Compose to build and start the services:
+
+3.	Build and Run Docker Containers: Use Docker Compose to build and start the services:
 docker-compose up --build
 
 ## **8.	Testing**
@@ -83,18 +90,19 @@ docker-compose logs
 
 ## **9.	Running Locally**
 Once the services are running, you can access:
-•	Flink Web UI: http://localhost:8081 for monitoring Flink jobs.
+•	**Flink Web UI:** http://localhost:8081 for monitoring Flink jobs.
 
 ![Flink Web UI](https://github.com/user-attachments/assets/1e8e960d-bdfe-42e4-9777-00a1ef558e6f)
 
-•	Redpanda UI: Access the Redpanda UI to view topics and messages.
+•	**Redpanda UI:** Access the Redpanda UI to view topics and messages.
  
 ## **10.	Interacting with Services**
 You can interact with the services using tools like curl or Postman. Here are some sample commands:
 •	Send a test message to Kafka:
 curl -X POST http://localhost:5000/api/send_message -H "Content-Type: application/json" -d '{"message": "Test message"}'
-•	Check trading signals:
-curl http://localhost:5001/api/trading_signals
+
+•	Check trading signals:**
+curl http://localhost:5001/api/trading_signals**
 
 ![redPanda](https://github.com/user-attachments/assets/6d8fe44a-735a-424d-a7ca-2fa01e9837d5)
 
