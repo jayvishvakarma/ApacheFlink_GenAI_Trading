@@ -85,6 +85,7 @@ docker-compose up --build
 
 ## **8.	Testing**
 To ensure all services are running correctly:
+
 •	Check the logs:
 docker-compose logs
 
@@ -101,8 +102,8 @@ You can interact with the services using tools like curl or Postman. Here are so
 •	Send a test message to Kafka:
 curl -X POST http://localhost:5000/api/send_message -H "Content-Type: application/json" -d '{"message": "Test message"}'
 
-•	Check trading signals:**
-curl http://localhost:5001/api/trading_signals**
+•	Check trading signals:
+**curl http://localhost:5001/api/trading_signals**
 
 ![redPanda](https://github.com/user-attachments/assets/6d8fe44a-735a-424d-a7ca-2fa01e9837d5)
 
