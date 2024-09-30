@@ -34,9 +34,13 @@ The project is designed to run locally with Docker, using the following services
 ![Architeccture](https://github.com/user-attachments/assets/940df9e2-2935-4c90-b930-25b7f8e2d9a6)
 
 •	Kafka Producer: Publishes stock prices and news to Kafka topics.
+
 •	Stream Processing Service: Analyzes data and generates trading signals.
+
 •	Trading Signal Service: Generates trading signals based on market conditions.
+
 •	Trade Execution Service: Executes trades via the Alpaca API.
+
 •	Notification Service: Sends alerts to a Slack channel.
 
 ## **4.	Workflow**
