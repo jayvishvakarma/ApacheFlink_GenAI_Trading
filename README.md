@@ -33,7 +33,7 @@ The project is designed to run locally with Docker, using the following services
 **3.	Microservices Architecture**
 ![Architeccture](https://github.com/user-attachments/assets/940df9e2-2935-4c90-b930-25b7f8e2d9a6)
 
-https://github.com/jayvishvakarma/Building-a-Real-Time-Stock-Market-Data-Pipeline/blob/main/Architeccture.png
+
 
 •	Kafka Producer: Publishes stock prices and news to Kafka topics.
 •	Stream Processing Service: Analyzes data and generates trading signals.
@@ -42,13 +42,17 @@ https://github.com/jayvishvakarma/Building-a-Real-Time-Stock-Market-Data-Pipelin
 •	Notification Service: Sends alerts to a Slack channel.
 
 **4.	Workflow**
-1.	Data Ingestion:
+
+![WorkFlow](https://github.com/user-attachments/assets/4059dba6-7430-43a6-816c-169985b5b629)
+
+**a.	Data Ingestion:**
 o	Fetch historical news and stock prices from the Alpaca API.
 o	Produce messages to respective Kafka topics in Redpanda.
-2.	Stream Processing:
+**b.	Stream Processing:**
 o	Use Apache Flink SQL to create tables and views for processing market news and stock prices.
+
 o	Calculate moving averages and generate trading signals.
-3.	Trading Signal Handling:
+**c.	Trading Signal Handling:**
 o	Messages containing trading signals are sent to a Slack channel and executed as trades via the Alpaca API.
 
 **5.	Configuration**
@@ -79,6 +83,8 @@ docker-compose logs
 Once the services are running, you can access:
 •	Flink Web UI: http://localhost:8081 for monitoring Flink jobs.
 
+![Flink Web UI](https://github.com/user-attachments/assets/1e8e960d-bdfe-42e4-9777-00a1ef558e6f)
+
 •	Redpanda UI: Access the Redpanda UI to view topics and messages.
  
 **10.	Interacting with Services**
@@ -87,6 +93,9 @@ You can interact with the services using tools like curl or Postman. Here are so
 curl -X POST http://localhost:5000/api/send_message -H "Content-Type: application/json" -d '{"message": "Test message"}'
 •	Check trading signals:
 curl http://localhost:5001/api/trading_signals
+
+![redPanda](https://github.com/user-attachments/assets/6d8fe44a-735a-424d-a7ca-2fa01e9837d5)
+
 
 **11.	License**
          All rights reserved. No copyright is allowed.
