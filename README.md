@@ -14,6 +14,7 @@ Table of Contents
 11.	Contributing
 12.	License
 13.	Additional Notes
+
 **#1.	Prerequisites**
 Before you begin, ensure you have met the following requirements:
 •	Docker Desktop installed on your local machine.
@@ -25,9 +26,10 @@ The project is designed to run locally with Docker, using the following services
 •	Apache Flink for real-time data processing.
 •	Alpaca API for trading execution.
 •	Slack API for notifications.
-Docker Compose
-This project uses Docker Compose to manage services. Ensure you have the docker-compose.yml file in your project root
+           Docker Compose
+           This project uses Docker Compose to manage services. Ensure you have the docker-compose.yml file in your project root
 **3.	Microservices Architecture**
+https://snapwork-my.sharepoint.com/:u:/p/jayv/Ec0yuN3DscxCm4XMXhaljcQBlOGppx8ZFsu9584NHkiPBg?e=eDKPsA 
 •	Kafka Producer: Publishes stock prices and news to Kafka topics.
 •	Stream Processing Service: Analyzes data and generates trading signals.
 •	Trading Signal Service: Generates trading signals based on market conditions.
@@ -80,5 +82,5 @@ curl http://localhost:5001/api/trading_signals
 **12.	Additional Notes**
 •	Ensure your Docker Desktop has enough resources allocated (CPU, Memory).
 •	For troubleshooting, refer to the logs of specific services using:
-docker-compose logs <service_name>
+docker-compose logs 
 •	For any issues related to the Alpaca API, refer to the Alpaca API documentation.
